@@ -14,12 +14,12 @@
                 background: color-mix(in srgb, var(--color), transparent 60%);
             }
             div, p, td {
-                width: 200px;
+                width: 20px;
                 word-wrap: break-word;
                 white-space: normal;
             }
             .fixwtd {
-                width: 200px;
+                width: 10px;
                 word-wrap: break-word;
                 white-space: normal;
             }
@@ -29,10 +29,113 @@
                 white-space: normal;
             }
         </style>
+        <style src="css/fancy-button.css"></style>
     </head>
     <body>
+        <button onclick="changeWidth(0.5)" class="button-74">Half Column Width</button>
         <table>
-          <tr><td class="indextd">0</td><td>lassitude</td><td class="fixwtd">['læsitju:d]</td><td class="fixwtd">n.无力；没精打采</td></tr><tr><td class="indextd">1</td><td>cob</td><td class="fixwtd">[kɔb]</td><td class="fixwtd">n.玉米棒子；雄天鹅</td></tr><tr><td class="indextd">2</td><td>conversant</td><td class="fixwtd">[kən'və:sənt]</td><td class="fixwtd">a.精通的，熟知的</td></tr><tr><td class="indextd">3</td><td>engross</td><td class="fixwtd">[in'grəus]</td><td class="fixwtd">v.全神贯注于</td></tr><tr><td class="indextd">4</td><td>epithet</td><td class="fixwtd">['epiθet]</td><td class="fixwtd">n.(贬低人的)短语或形容词</td></tr><tr><td class="indextd">5</td><td>giggle</td><td class="fixwtd">['gigl]</td><td class="fixwtd">v.咯咯笑</td></tr><tr><td class="indextd">6</td><td>girder</td><td class="fixwtd">['gə:də]</td><td class="fixwtd">n.大梁<br><img alt="What Is a Girder Bridge? | Civil Engineering" src="paste-dea8bb55b40d6a755fc9c8190c7bcfa0cff0cbd4.jpg"></td></tr><tr><td class="indextd">7</td><td>infernal</td><td class="fixwtd">[in'fə:nl]</td><td class="fixwtd">adj. 地狱的；可恶的</td></tr><tr><td class="indextd">8</td><td>jovial</td><td class="fixwtd">['dʒəuviəl]</td><td class="fixwtd">a.愉快的</td></tr><tr><td class="indextd">9</td><td>ludicrous</td><td class="fixwtd">['lu:dikrəs]</td><td class="fixwtd">a.荒唐可笑的</td></tr><tr><td class="indextd">10</td><td>mettlesome</td><td class="fixwtd">['met(ə)lsəm]</td><td class="fixwtd">a.精神抖擞的</td></tr><tr><td class="indextd">11</td><td>paleontology</td><td class="fixwtd">[`pæliɔn'tɔlədʒi]</td><td class="fixwtd">n.古生物学</td></tr><tr><td class="indextd">12</td><td>peevish</td><td class="fixwtd">['pi:viʃ]</td><td class="fixwtd">a.坏脾气的，易怒的</td></tr><tr><td class="indextd">13</td><td>resin</td><td class="fixwtd">['rezin]</td><td class="fixwtd">n.树脂</td></tr><tr><td class="indextd">14</td><td>riveting</td><td class="fixwtd">['rivitiŋ]</td><td class="fixwtd">a.非常精彩的</td></tr><tr><td class="indextd">15</td><td>roe</td><td class="fixwtd">[rəu]</td><td class="fixwtd">n.鱼卵<br><img alt="Salmon-Roe-Topped Baked Potatoes With Crème Fraîche Recipe" src="paste-c0dd42e84aaaf23e322d5e9b978e109d75b170c6.jpg"></td></tr><tr><td class="indextd">16</td><td>shiftiness</td><td class="fixwtd">['ʃiftinis]</td><td class="fixwtd">n.奸诈</td></tr><tr><td class="indextd">17</td><td>swing</td><td class="fixwtd">[swiŋ]</td><td class="fixwtd">v.摇摆；旋转；n.秋千</td></tr><tr><td class="indextd">18</td><td>bellwether</td><td class="fixwtd">['bel.we0ə]</td><td class="fixwtd">n.领导者，领头羊</td></tr><tr><td class="indextd">19</td><td>bibulous</td><td class="fixwtd">['bibjuləs]</td><td class="fixwtd">adj. 高度吸收的; 嗜酒的</td></tr><tr><td class="indextd">20</td><td>cadge</td><td class="fixwtd">[kædʒ]</td><td class="fixwtd">v.乞讨；佔便宜</td></tr><tr><td class="indextd">21</td><td>canopy</td><td class="fixwtd">['kænəpi]</td><td class="fixwtd">n.蚊帐，华盖</td></tr><tr><td class="indextd">22</td><td>ceramics</td><td class="fixwtd">[si'ræmiks]</td><td class="fixwtd">n.制陶业)；陶器<br><img alt="Four Exceptional Ceramics Collections That Elevate the Everyday | Azure  Magazine" src="paste-ebebd3acddf1167667e5afbea68bd1142c6c8447.jpg"></td></tr><tr><td class="indextd">23</td><td>cerebral</td><td class="fixwtd">['seribrəl]</td><td class="fixwtd">a.大脑的；深思的</td></tr><tr><td class="indextd">24</td><td>cloture</td><td class="fixwtd">['kləutʃə]</td><td class="fixwtd">n.辩论的终结</td></tr><tr><td class="indextd">25</td><td>cocoon</td><td class="fixwtd">[kə'ku:n]</td><td class="fixwtd">n.茧</td></tr><tr><td class="indextd">26</td><td>collage</td><td class="fixwtd">[kə'lɑ:ʒ]</td><td class="fixwtd">n.拼贴画</td></tr><tr><td class="indextd">27</td><td>complacent</td><td class="fixwtd">[kəm'pleisnt]</td><td class="fixwtd">a.自满的，得意的</td></tr><tr><td class="indextd">28</td><td>complaisance</td><td class="fixwtd">[kəm'pleizəns]</td><td class="fixwtd">n.彬彬有礼，慇懃，柔顺</td></tr><tr><td class="indextd">29</td><td>confederacy</td><td class="fixwtd">[kən'fedərəsi]</td><td class="fixwtd">n.联盟或同盟</td></tr><tr><td class="indextd">30</td><td>conformist</td><td class="fixwtd">[kɔn'fɔ:mist]</td><td class="fixwtd">n.尊奉者，英国国教徒</td></tr><tr><td class="indextd">31</td><td>corporal</td><td class="fixwtd">['kɔ:pərəl]</td><td class="fixwtd">adj. 肉体的，身体的</td></tr><tr><td class="indextd">32</td><td>credo</td><td class="fixwtd">['kri:dəu]</td><td class="fixwtd">n. 信条</td></tr><tr><td class="indextd">33</td><td>cutlery</td><td class="fixwtd">['kʌtləri]</td><td class="fixwtd">n.(刀、叉、匙等)餐具</td></tr><tr><td class="indextd">34</td><td>deface</td><td class="fixwtd">[di'feis]</td><td class="fixwtd">v.损坏</td></tr><tr><td class="indextd">35</td><td>disfranchise</td><td class="fixwtd">[dis'fræntʃaiz]</td><td class="fixwtd">v. 剥夺…的权利(尤指选举权或公民权)</td></tr><tr><td class="indextd">36</td><td>drudgery</td><td class="fixwtd">['drʌdʒəri]</td><td class="fixwtd">n.苦工，苦活</td></tr><tr><td class="indextd">37</td><td>elated</td><td class="fixwtd">[i'leitid]</td><td class="fixwtd">a.得意洋洋的，振奋的</td></tr><tr><td class="indextd">38</td><td>elocution</td><td class="fixwtd">[`elə'kju:ʃən]</td><td class="fixwtd">n.演说术</td></tr><tr><td class="indextd">39</td><td>embroider</td><td class="fixwtd">[im'brɔidə]</td><td class="fixwtd">v.刺绣，修饰</td></tr><tr><td class="indextd">40</td><td>episodic</td><td class="fixwtd">[epi'sɔdik]</td><td class="fixwtd">a.偶然发生的，分散性的</td></tr><tr><td class="indextd">41</td><td>excursion</td><td class="fixwtd">[iks'kə:ʃən]</td><td class="fixwtd">n.短途旅游</td></tr><tr><td class="indextd">42</td><td>fang</td><td class="fixwtd">[fæŋ]</td><td class="fixwtd">n.(毒蛇的)尖牙<br><img alt="Genndy Tartakovsky's Primal: 14 Facts That Will Bring Out Your Inner Reptile" src="images-e232c45b1db6f1af89fc1688113275e37baaa329.jpg"></td></tr><tr><td class="indextd">43</td><td>fester</td><td class="fixwtd">['festə]</td><td class="fixwtd">v.(指伤口)溃烂，化脓</td></tr><tr><td class="indextd">44</td><td>figurehead</td><td class="fixwtd">['figəhed]</td><td class="fixwtd">n.名义领袖；傀儡</td></tr><tr><td class="indextd">45</td><td>fulcrum</td><td class="fixwtd">['fʌlkrəm]</td><td class="fixwtd">n.杠杆支点，支柱</td></tr><tr><td class="indextd">46</td><td>garner</td><td class="fixwtd">['gɑ:nə]</td><td class="fixwtd">v.收藏，积累</td></tr><tr><td class="indextd">47</td><td>grimace</td><td class="fixwtd">[gri'meis]</td><td class="fixwtd">v./n.做鬼脸，面部歪扭</td></tr><tr><td class="indextd">48</td><td>guttle</td><td class="fixwtd">['gʌtl]</td><td class="fixwtd">v. 狼吞虎咽</td></tr><tr><td class="indextd">49</td><td>habituate</td><td class="fixwtd">[hə'bitjueit]</td><td class="fixwtd">v.使习惯于</td></tr>
+          <tr><td class="indextd">0</td><td>lassitude</td><td class="fixwtd">['læsitju:d]</td><td class="fixwtd">n.无力；没精打采</td></tr>
+<tr><td class="indextd">1</td><td>cob</td><td class="fixwtd">[kɔb]</td><td class="fixwtd">n.玉米棒子；雄天鹅</td></tr>
+<tr><td class="indextd">2</td><td>conversant</td><td class="fixwtd">[kən'və:sənt]</td><td class="fixwtd">a.精通的，熟知的</td></tr>
+<tr><td class="indextd">3</td><td>engross</td><td class="fixwtd">[in'grəus]</td><td class="fixwtd">v.全神贯注于</td></tr>
+<tr><td class="indextd">4</td><td>epithet</td><td class="fixwtd">['epiθet]</td><td class="fixwtd">n.(贬低人的)短语或形容词</td></tr>
+<tr><td class="indextd">5</td><td>giggle</td><td class="fixwtd">['gigl]</td><td class="fixwtd">v.咯咯笑</td></tr>
+<tr><td class="indextd">6</td><td>girder</td><td class="fixwtd">['gə:də]</td><td class="fixwtd">n.大梁<br><img src="./images/paste-dea8bb55b40d6a755fc9c8190c7bcfa0cff0cbd4.jpg"></td></tr>
+<tr><td class="indextd">7</td><td>infernal</td><td class="fixwtd">[in'fə:nl]</td><td class="fixwtd">adj. 地狱的；可恶的</td></tr>
+<tr><td class="indextd">8</td><td>jovial</td><td class="fixwtd">['dʒəuviəl]</td><td class="fixwtd">a.愉快的</td></tr>
+<tr><td class="indextd">9</td><td>ludicrous</td><td class="fixwtd">['lu:dikrəs]</td><td class="fixwtd">a.荒唐可笑的</td></tr>
+<tr><td class="indextd">10</td><td>mettlesome</td><td class="fixwtd">['met(ə)lsəm]</td><td class="fixwtd">a.精神抖擞的</td></tr>
+<tr><td class="indextd">11</td><td>paleontology</td><td class="fixwtd">[`pæliɔn'tɔlədʒi]</td><td class="fixwtd">n.古生物学</td></tr>
+<tr><td class="indextd">12</td><td>peevish</td><td class="fixwtd">['pi:viʃ]</td><td class="fixwtd">a.坏脾气的，易怒的</td></tr>
+<tr><td class="indextd">13</td><td>resin</td><td class="fixwtd">['rezin]</td><td class="fixwtd">n.树脂</td></tr>
+<tr><td class="indextd">14</td><td>riveting</td><td class="fixwtd">['rivitiŋ]</td><td class="fixwtd">a.非常精彩的</td></tr>
+<tr><td class="indextd">15</td><td>roe</td><td class="fixwtd">[rəu]</td><td class="fixwtd">n.鱼卵<br><img src="./images/paste-c0dd42e84aaaf23e322d5e9b978e109d75b170c6.jpg"></td></tr>
+<tr><td class="indextd">16</td><td>shiftiness</td><td class="fixwtd">['ʃiftinis]</td><td class="fixwtd">n.奸诈</td></tr>
+<tr><td class="indextd">17</td><td>swing</td><td class="fixwtd">[swiŋ]</td><td class="fixwtd">v.摇摆；旋转；n.秋千</td></tr>
+<tr><td class="indextd">18</td><td>bellwether</td><td class="fixwtd">['bel.we0ə]</td><td class="fixwtd">n.领导者，领头羊</td></tr>
+<tr><td class="indextd">19</td><td>bibulous</td><td class="fixwtd">['bibjuləs]</td><td class="fixwtd">adj. 高度吸收的; 嗜酒的</td></tr>
+<tr><td class="indextd">20</td><td>cadge</td><td class="fixwtd">[kædʒ]</td><td class="fixwtd">v.乞讨；佔便宜</td></tr>
+<tr><td class="indextd">21</td><td>canopy</td><td class="fixwtd">['kænəpi]</td><td class="fixwtd">n.蚊帐，华盖</td></tr>
+<tr><td class="indextd">22</td><td>ceramics</td><td class="fixwtd">[si'ræmiks]</td><td class="fixwtd">n.制陶业)；陶器<br><img src="./images/paste-ebebd3acddf1167667e5afbea68bd1142c6c8447.jpg"></td></tr>
+<tr><td class="indextd">23</td><td>cerebral</td><td class="fixwtd">['seribrəl]</td><td class="fixwtd">a.大脑的；深思的</td></tr>
+<tr><td class="indextd">24</td><td>cloture</td><td class="fixwtd">['kləutʃə]</td><td class="fixwtd">n.辩论的终结</td></tr>
+<tr><td class="indextd">25</td><td>cocoon</td><td class="fixwtd">[kə'ku:n]</td><td class="fixwtd">n.茧</td></tr>
+<tr><td class="indextd">26</td><td>collage</td><td class="fixwtd">[kə'lɑ:ʒ]</td><td class="fixwtd">n.拼贴画</td></tr>
+<tr><td class="indextd">27</td><td>complacent</td><td class="fixwtd">[kəm'pleisnt]</td><td class="fixwtd">a.自满的，得意的</td></tr>
+<tr><td class="indextd">28</td><td>complaisance</td><td class="fixwtd">[kəm'pleizəns]</td><td class="fixwtd">n.彬彬有礼，慇懃，柔顺</td></tr>
+<tr><td class="indextd">29</td><td>confederacy</td><td class="fixwtd">[kən'fedərəsi]</td><td class="fixwtd">n.联盟或同盟</td></tr>
+<tr><td class="indextd">30</td><td>conformist</td><td class="fixwtd">[kɔn'fɔ:mist]</td><td class="fixwtd">n.尊奉者，英国国教徒</td></tr>
+<tr><td class="indextd">31</td><td>corporal</td><td class="fixwtd">['kɔ:pərəl]</td><td class="fixwtd">adj. 肉体的，身体的</td></tr>
+<tr><td class="indextd">32</td><td>credo</td><td class="fixwtd">['kri:dəu]</td><td class="fixwtd">n. 信条</td></tr>
+<tr><td class="indextd">33</td><td>cutlery</td><td class="fixwtd">['kʌtləri]</td><td class="fixwtd">n.(刀、叉、匙等)餐具</td></tr>
+<tr><td class="indextd">34</td><td>deface</td><td class="fixwtd">[di'feis]</td><td class="fixwtd">v.损坏</td></tr>
+<tr><td class="indextd">35</td><td>disfranchise</td><td class="fixwtd">[dis'fræntʃaiz]</td><td class="fixwtd">v. 剥夺…的权利(尤指选举权或公民权)</td></tr>
+<tr><td class="indextd">36</td><td>drudgery</td><td class="fixwtd">['drʌdʒəri]</td><td class="fixwtd">n.苦工，苦活</td></tr>
+<tr><td class="indextd">37</td><td>elated</td><td class="fixwtd">[i'leitid]</td><td class="fixwtd">a.得意洋洋的，振奋的</td></tr>
+<tr><td class="indextd">38</td><td>elocution</td><td class="fixwtd">[`elə'kju:ʃən]</td><td class="fixwtd">n.演说术</td></tr>
+<tr><td class="indextd">39</td><td>embroider</td><td class="fixwtd">[im'brɔidə]</td><td class="fixwtd">v.刺绣，修饰</td></tr>
+<tr><td class="indextd">40</td><td>episodic</td><td class="fixwtd">[epi'sɔdik]</td><td class="fixwtd">a.偶然发生的，分散性的</td></tr>
+<tr><td class="indextd">41</td><td>excursion</td><td class="fixwtd">[iks'kə:ʃən]</td><td class="fixwtd">n.短途旅游</td></tr>
+<tr><td class="indextd">42</td><td>fang</td><td class="fixwtd">[fæŋ]</td><td class="fixwtd">n.(毒蛇的)尖牙<br><img src="./images/images-e232c45b1db6f1af89fc1688113275e37baaa329.jpg"></td></tr>
+<tr><td class="indextd">43</td><td>fester</td><td class="fixwtd">['festə]</td><td class="fixwtd">v.(指伤口)溃烂，化脓</td></tr>
+<tr><td class="indextd">44</td><td>figurehead</td><td class="fixwtd">['figəhed]</td><td class="fixwtd">n.名义领袖；傀儡</td></tr>
+<tr><td class="indextd">45</td><td>fulcrum</td><td class="fixwtd">['fʌlkrəm]</td><td class="fixwtd">n.杠杆支点，支柱</td></tr>
+<tr><td class="indextd">46</td><td>garner</td><td class="fixwtd">['gɑ:nə]</td><td class="fixwtd">v.收藏，积累</td></tr>
+<tr><td class="indextd">47</td><td>grimace</td><td class="fixwtd">[gri'meis]</td><td class="fixwtd">v./n.做鬼脸，面部歪扭</td></tr>
+<tr><td class="indextd">48</td><td>guttle</td><td class="fixwtd">['gʌtl]</td><td class="fixwtd">v. 狼吞虎咽</td></tr>
+<tr><td class="indextd">49</td><td>habituate</td><td class="fixwtd">[hə'bitjueit]</td><td class="fixwtd">v.使习惯于</td></tr>
+<tr><td class="indextd">50</td><td>hackneyed</td><td class="fixwtd">['hæknid]</td><td class="fixwtd">a.陈腐的，平常的</td></tr>
+<tr><td class="indextd">51</td><td>harrow</td><td class="fixwtd">['hærəu]</td><td class="fixwtd">n.耙；v.使痛苦</td></tr>
+<tr><td class="indextd">52</td><td>headstrong</td><td class="fixwtd">['hedstrɔŋ]</td><td class="fixwtd">a.刚愎自用的</td></tr>
+<tr><td class="indextd">53</td><td>heckle</td><td class="fixwtd">['hekl]</td><td class="fixwtd">v.诘问，困扰</td></tr>
+<tr><td class="indextd">54</td><td>heretic</td><td class="fixwtd">['herətik]</td><td class="fixwtd">n.异教徒</td></tr>
+<tr><td class="indextd">55</td><td>immanent</td><td class="fixwtd">['imənənt]</td><td class="fixwtd">a.内在的；普遍存在的</td></tr>
+<tr><td class="indextd">56</td><td>immure</td><td class="fixwtd">[i'mjuə]</td><td class="fixwtd">v.监禁</td></tr>
+<tr><td class="indextd">57</td><td>inadvertently</td><td class="fixwtd">[`inəd'və:təntli]</td><td class="fixwtd">adv.不小心地，非故意地</td></tr>
+<tr><td class="indextd">58</td><td>incriminate</td><td class="fixwtd">[in'krimi`neit]</td><td class="fixwtd">v.连累，牵连</td></tr>
+<tr><td class="indextd">59</td><td>infatuation</td><td class="fixwtd">[in`fætju'eiʃən]</td><td class="fixwtd">n.迷恋</td></tr>
+<tr><td class="indextd">60</td><td>iota</td><td class="fixwtd">[ai'əutə]</td><td class="fixwtd">n.极小量，极少</td></tr>
+<tr><td class="indextd">61</td><td>languid</td><td class="fixwtd">['læŋgwid]</td><td class="fixwtd">a.没精打采的，倦怠的</td></tr>
+<tr><td class="indextd">62</td><td>ligature</td><td class="fixwtd">['ligətʃuə]</td><td class="fixwtd">n. 绑缚之物(尤指系住血管以免失血的线)</td></tr>
+<tr><td class="indextd">63</td><td>maladroit</td><td class="fixwtd">[`mælə'drɔit]</td><td class="fixwtd">a.笨拙的</td></tr>
+<tr><td class="indextd">64</td><td>mercurial</td><td class="fixwtd">[mə:'kjuəriəl]</td><td class="fixwtd">a.善变的；活泼的</td></tr>
+<tr><td class="indextd">65</td><td>misnomer</td><td class="fixwtd">['mis'nəumə]</td><td class="fixwtd">n.名字的误用</td></tr>
+<tr><td class="indextd">66</td><td>motley</td><td class="fixwtd">['mɔtli]</td><td class="fixwtd">a.混杂的；杂色的</td></tr>
+<tr><td class="indextd">67</td><td>myopic</td><td class="fixwtd">[mai'ɔpik]</td><td class="fixwtd">a.近视眼的；缺乏辨别力的<div><br></div><div><br></div><div>我的视力有点近</div></td></tr>
+<tr><td class="indextd">68</td><td>obstreperous</td><td class="fixwtd">[əb'strepərəs]</td><td class="fixwtd">a.吵闹的，难管束的<div><br></div><div>管乐队 很多空 很吵闹</div></td></tr>
+<tr><td class="indextd">69</td><td>ogle</td><td class="fixwtd">['əugl]</td><td class="fixwtd">v.送秋波；n.媚眼</td></tr>
+<tr><td class="indextd">70</td><td>orthodontics</td><td class="fixwtd">[`ɔ:θəu'dɔntiks]</td><td class="fixwtd">n.畸齿矫正学</td></tr>
+<tr><td class="indextd">71</td><td>perfidy</td><td class="fixwtd">['pə:fidi]</td><td class="fixwtd">n.不忠，背叛</td></tr>
+<tr><td class="indextd">72</td><td>pitcher</td><td class="fixwtd">['pitʃə]</td><td class="fixwtd">n.有柄水罐<br><img src="./images/paste-3734f2bb9ca20bb7bd2e2c08e753015ab130772f.jpg"></td></tr>
+<tr><td class="indextd">73</td><td>pledge</td><td class="fixwtd">[pledʒ]</td><td class="fixwtd">n.誓言，保证；v.发誓</td></tr>
+<tr><td class="indextd">74</td><td>pleonastic</td><td class="fixwtd">[`pli:əu'næstik]</td><td class="fixwtd">adj. 啰嗦的</td></tr>
+<tr><td class="indextd">75</td><td>porcelain</td><td class="fixwtd">['pɔ:slin]</td><td class="fixwtd">n.瓷；瓷器</td></tr>
+<tr><td class="indextd">76</td><td>prevaricate</td><td class="fixwtd">[pri'værikeit]</td><td class="fixwtd">v.支吾其词，说谎</td></tr>
+<tr><td class="indextd">77</td><td>prodigal</td><td class="fixwtd">['prɔdigəl]</td><td class="fixwtd">a.挥霍的；n.挥霍者</td></tr>
+<tr><td class="indextd">78</td><td>pummel</td><td class="fixwtd">['pʌm(ə)l]</td><td class="fixwtd">v. (用拳)接连地打，打击</td></tr>
+<tr><td class="indextd">79</td><td>pundit</td><td class="fixwtd">['pʌndit]</td><td class="fixwtd">n.权威人士，专家</td></tr>
+<tr><td class="indextd">80</td><td>purloin</td><td class="fixwtd">[pə:'lɔin]</td><td class="fixwtd">v.偷窃</td></tr>
+<tr><td class="indextd">81</td><td>pylon</td><td class="fixwtd">['pailən]</td><td class="fixwtd">n.高压电线架；桥塔</td></tr>
+<tr><td class="indextd">82</td><td>quail</td><td class="fixwtd">[kweil]</td><td class="fixwtd">v.畏惧，颤抖</td></tr>
+<tr><td class="indextd">83</td><td>rambunctious</td><td class="fixwtd">[ræm'bʌŋkʃəs]</td><td class="fixwtd">a.骚乱的；(兴奋)控制不了的</td></tr>
+<tr><td class="indextd">84</td><td>rancid</td><td class="fixwtd">['rænsid]</td><td class="fixwtd">a.不新鲜的，变味的</td></tr>
+<tr><td class="indextd">85</td><td>rectitude</td><td class="fixwtd">['rektitju:d]</td><td class="fixwtd">n.诚实，正直</td></tr>
+<tr><td class="indextd">86</td><td>redolent</td><td class="fixwtd">['redəulənt]</td><td class="fixwtd">a.芬芳的，芳香的</td></tr>
+<tr><td class="indextd">87</td><td>rendezvous</td><td class="fixwtd">['rɔndivu:]</td><td class="fixwtd">n.约会；约会地点</td></tr>
+<tr><td class="indextd">88</td><td>reportage</td><td class="fixwtd">[`repɔ:'tɑ:dʒ]</td><td class="fixwtd">n. 报导，报导的消息，报告文学</td></tr>
+<tr><td class="indextd">89</td><td>retinue</td><td class="fixwtd">['retinju:]</td><td class="fixwtd">n.侍从，随员团</td></tr>
+<tr><td class="indextd">90</td><td>saunter</td><td class="fixwtd">['sɔ:ntə]</td><td class="fixwtd">n./v.闲逛，漫步</td></tr>
+<tr><td class="indextd">91</td><td>scabbard</td><td class="fixwtd">['skæbəd]</td><td class="fixwtd">n.(刀剑)鞘</td></tr>
+<tr><td class="indextd">92</td><td>sculpt</td><td class="fixwtd">[skʌlpt]</td><td class="fixwtd">v.雕刻</td></tr>
+<tr><td class="indextd">93</td><td>scuttle</td><td class="fixwtd">['skʌtl]</td><td class="fixwtd">n. 舷窗，舱口盖</td></tr>
+<tr><td class="indextd">94</td><td>seafaring</td><td class="fixwtd">['si:feəri6]</td><td class="fixwtd">adj. 航海的，跟航海有关的</td></tr>
+<tr><td class="indextd">95</td><td>sever</td><td class="fixwtd">['sevə]</td><td class="fixwtd">v.切断，脱离</td></tr>
+<tr><td class="indextd">96</td><td>snub</td><td class="fixwtd">[snʌb]</td><td class="fixwtd">v.冷落，不理睬</td></tr>
+<tr><td class="indextd">97</td><td>snug</td><td class="fixwtd">[snʌg]</td><td class="fixwtd">a.温暖的，舒适的</td></tr>
+<tr><td class="indextd">98</td><td>splice</td><td class="fixwtd">[splais]</td><td class="fixwtd">v.接合，衔接</td></tr>
+<tr><td class="indextd">99</td><td>stench</td><td class="fixwtd">[stentʃ]</td><td class="fixwtd">n.臭气，恶臭(stink)</td></tr>
+
         </table>
+        <script src="js/change-width.js"></script>
     </body>
     
