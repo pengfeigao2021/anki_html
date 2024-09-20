@@ -3,7 +3,7 @@ cd /Users/AlexG/Documents/GitHub/anki_html
 git reflog expire --expire=now --all
 git gc --prune=now --aggressive
 # add files
-git reset --soft anki_v1.0
+git reset --soft anki_v1.3
 git add .
 d=`date +%Y%m%d\(%H:%M:%S\)`
 echo $d
