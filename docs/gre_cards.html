@@ -3,6 +3,7 @@
         <style>
             table {
                 --color: #d0d0f5;
+                margin: 3em;
             }
 
             thead,
@@ -14,12 +15,12 @@
                 background: color-mix(in srgb, var(--color), transparent 60%);
             }
             div, p, td {
-                width: 20px;
+                width: 200px;
                 word-wrap: break-word;
                 white-space: normal;
             }
             .fixwtd {
-                width: 10px;
+                width: 200px;
                 word-wrap: break-word;
                 white-space: normal;
             }
@@ -28,12 +29,22 @@
                 word-wrap: break-word;
                 white-space: normal;
             }
+            footer {
+                background-color: #f1f1f1;
+                padding: 20px;
+                text-align: center;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+            }
         </style>
-        <style src="css/fancy-button.css"></style>
+        <link rel="stylesheet" href="css/fancy-button.css">
     </head>
     <body>
-        <button onclick="changeWidth(0.5)" class="button-74">Half Column Width</button>
-        <table>
+        <button onclick="changeWidth(0.5)" class="button-74 fix-width-button">Half Column Width</button>
+        <button onclick="hideRows(10)" class="button-73 fix-width-button">Hide Rows</button>
+        <table id="cards">
           <tr><td class="indextd">0</td><td>lassitude</td><td class="fixwtd">['læsitju:d]</td><td class="fixwtd">n.无力；没精打采</td></tr>
 <tr><td class="indextd">1</td><td>cob</td><td class="fixwtd">[kɔb]</td><td class="fixwtd">n.玉米棒子；雄天鹅</td></tr>
 <tr><td class="indextd">2</td><td>conversant</td><td class="fixwtd">[kən'və:sənt]</td><td class="fixwtd">a.精通的，熟知的</td></tr>
@@ -137,5 +148,6 @@
 
         </table>
         <script src="js/change-width.js"></script>
+        <script src="js/hide-rows.js"></script>
     </body>
     
