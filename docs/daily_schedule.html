@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daily Checklist</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2em;
+    }
+    h1 {
+      margin-bottom: 0.5em;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 32px;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    button {
+      margin-right: 1em;
+      padding: 0.5em 1em;
+    }
+    .history-item {
+      margin-bottom: 1em;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Daily Checklist</h1>
+
+  <div id="checklist">
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" data-task="push ups"> push ups
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" data-task="stretching"> stretching
+        </label>
+      </li>
+      <li>
+        <label>
+          <input type="checkbox" data-task="anki: GRE"> anki: GRE
+        </label>
+      </li>
+      <!-- jumping rope -->
+      <li>
+        <label>
+          <input type="checkbox" data-task="jumping rope"> jumping rope
+        </label>
+      </li>
+      <!-- NIW -->
+      <li>
+        <label>
+          <input type="checkbox" data-task="NIW"> NIW
+        </label>
+      </li>
+      <!-- reading 5min -->
+      <li>
+        <label>
+          <input type="checkbox" data-task="reading 5min"> reading 5min
+        </label>
+      </li>
+      <!-- brush teeth -->
+      <li>
+        <label>
+          <input type="checkbox" data-task="brush teeth"> brush teeth
+        </label>
+      </li>
+    </ul>
+  </div>
+
+  <button id="saveBtn">Save Today's Checklist</button>
+  <button id="viewHistoryBtn">View History</button>
+
+  <h2>History</h2>
+  <div id="history"></div>
+
+  <script>
+    // Utility function to load history from localStorage.
+    function loadHistory() {
+      const history = localStorage.getItem('dailyChecklistHistory');
+      return history ? JSON.parse(history) : [];
+    }
+
+    // Utility function to save history to localStorage.
+    function saveHistory(history) {
+      localStorage.setItem('dailyChecklistHistory', JSON.stringify(history));
+    }
+
+    // Handle saving today's checklist.
+    document.getElementById('saveBtn').addEventListener('click', () => {
+      const checkboxes = document.querySelectorAll('#checklist input[type="checkbox"]');
+      const dayRecord = {
+        date: new Date().toLocaleString(),
+        items: []
+      };
+
+      checkboxes.forEach(checkbox => {
+        dayRecord.items.push({
+          task: checkbox.getAttribute('data-task'),
+          completed: checkbox.checked
+        });
+        // Reset checkbox for next day.
+        checkbox.checked = false;
+      });
+
+      // Get existing history, append today's record, and save it back.
+      const history = loadHistory();
+      history.push(dayRecord);
+      saveHistory(history);
+      renderHistory();
+    });
+
+    // Display historical saved checklists.
+    function renderHistory() {
+      const historyDiv = document.getElementById('history');
+      historyDiv.innerHTML = ''; // Clear previous content
+
+      const history = loadHistory();
+      if (history.length === 0) {
+        historyDiv.innerHTML = '<p>No history available.</p>';
+        return;
+      }
+
+      const table = document.createElement('table');
+      table.style.borderCollapse = 'collapse';
+
+      // Create header row using keys from the first object
+      const headerRow = document.createElement('tr');
+      Object.keys(history[0]).forEach(key => {
+        const th = document.createElement('th');
+        th.textContent = key;
+        th.style.border = '1px solid #ddd';
+        th.style.padding = '8px';
+        headerRow.appendChild(th);
+      });
+      table.appendChild(headerRow);
+
+      // Create a row for each object
+      history.forEach(record => {
+        const row = document.createElement('tr');
+        const date_cell = document.createElement('td');
+        date_cell.textContent = record.date;
+        date_cell.style.border = '1px solid #ddd';
+        date_cell.style.padding = '8px';
+        row.appendChild(date_cell);
+
+        const completed_items = record.items.filter(item => item.completed).map(item => item.task);
+        const cell = document.createElement('td');
+        cell.textContent = completed_items.join(', ');
+        cell.style.border = '1px solid #ddd';
+        cell.style.padding = '8px';
+        row.appendChild(cell);
+        table.appendChild(row);
+      });
+
+      historyDiv.appendChild(table);
+
+
+    }
+
+    // Attach event listener to view history button.
+    document.getElementById('viewHistoryBtn').addEventListener('click', renderHistory);
+
+    // Optionally, load history on page load.
+    window.onload = renderHistory;
+  </script>
+</body>
+</html>
