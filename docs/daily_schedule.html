@@ -28,6 +28,42 @@
       padding: 0.5em;
       border: 1px solid #ccc;
     }
+
+    /* Mobile Styles */
+    @media (max-width: 600px) {
+      body {
+        margin: 1em;
+      }
+      ul {
+        font-size: 24px; /* Slightly smaller text to fit mobile screens */
+      }
+      li {
+        margin-bottom: 1em;
+      }
+      /* Make each label display as a block-level element */
+      li label {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      /* Enlarge the checkbox so it’s easier to tap */
+      input[type="checkbox"] {
+        transform: scale(1.5);
+        margin-right: 10px;
+        vertical-align: middle;
+      }
+      /* Make buttons larger and span the full width */
+      button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+        margin-right: 0;
+      }
+    }
   </style>
 </head>
 <body>
@@ -163,8 +199,6 @@
       });
 
       historyDiv.appendChild(table);
-
-
     }
 
     // Attach event listener to view history button.
@@ -175,3 +209,4 @@
   </script>
 </body>
 </html>
+
