@@ -1,5 +1,5 @@
 # reset to tag and push changes
-base_tag="anki_v1.5"
+base_tag="anki_v1.6"
 cd /Users/AlexG/Documents/GitHub/anki_html
 # remove unused commits
 git reflog expire --expire=now --all
