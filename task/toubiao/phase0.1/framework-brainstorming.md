@@ -46,12 +46,17 @@ Mac 地址
 
 ### baseline 1
 
+```markdown
+# data preprocessing
+
 * sample1: company + attributes + historical attributes
 * sample2: company + attributes + historical attributes
 
-```
+# method
 clustering algorithm
-output: company + cluster id
+
+# output
+company + cluster id
 ```
 
 #### problems:
