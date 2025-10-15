@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>LLM clustering best practices</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="llm-clustering-best-practices">LLM clustering best practices</h1>
+<h2 id="q-clustering-best-practices-and-research-fields">Q: clustering best practices and research fields</h2>
+<h3 id="question">Question:</h3>
+<pre><code>for a given a dataset with company names, each company name is assciated with a set of categorical features and some numerical features. What are the best practices to cluster the companies into clusters, and similar company should fall into the same cluster. The similarity definition could be:
+1. the companies share the same values on some subset of attributes
+2. some of the attribute values are similar(not exactly the same, but similar)
+3. some of the companies share similar behaviours in history
+
+Please help me summarize current best practices to cluster those companies and please provide research fields or industry fields that are actively studying this problem.
+</code></pre>
+<h3 id="answer">Answer:</h3>
+<pre><code class="language-markdown">Here’s a structured overview of best practices for clustering companies described by mixed categorical, numerical and behavioral attributes, together with pointers to the research and industry domains where these methods are actively used.
+
+---
+
+<span class="hljs-section">## 1. Data Preparation &amp; Feature Engineering</span>
+
+<span class="hljs-bullet">1.</span> <span class="hljs-strong">**Cleaning &amp; Imputation**</span>
+
+<span class="hljs-bullet">   *</span> Handle missing values separately for numerical (mean/median imputation, model-based) and categorical (mode, “missing” category).
+<span class="hljs-bullet">   *</span> Where behavior histories are sparse, consider smoothing or imputing via time-aware methods.
+
+<span class="hljs-bullet">2.</span> <span class="hljs-strong">**Encoding Categorical Features**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**One-Hot / Dummy Encoding**</span> for low-cardinality fields.
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Target/Impact Encoding**</span> when you have an outcome to regularize around (e.g., purchase propensity).
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Entity Embeddings**</span> via shallow neural networks to learn dense representations of high-cardinality fields (“company sector”, “region”, etc.)—used in fraud and credit-risk modeling.
+
+<span class="hljs-bullet">3.</span> <span class="hljs-strong">**Scaling &amp; Normalization**</span>
+
+<span class="hljs-bullet">   *</span> Standardize or min–max scale numerical features.
+<span class="hljs-bullet">   *</span> For behavioral time-series features (e.g., monthly transaction counts), consider log-scaling or seasonal decomposition.
+
+<span class="hljs-bullet">4.</span> <span class="hljs-strong">**Feature Selection / Dimensionality Reduction**</span>
+
+<span class="hljs-bullet">   *</span> Remove or combine highly correlated features.
+<span class="hljs-bullet">   *</span> Apply PCA or autoencoder bottleneck layers to learn compact numerical embeddings.
+<span class="hljs-bullet">   *</span> Use feature‐importance (e.g., tree-based) to drop irrelevant attributes.
+
+---
+
+<span class="hljs-section">## 2. Similarity Measures for Mixed Data</span>
+
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Gower’s Distance**</span>: handles mixed numeric, categorical, ordinal → widely implemented in R (cluster::daisy) and Python (gower).
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Hamming / Jaccard Distances**</span> on binarized categoricals for attribute-sharing similarity.
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Cosine / Euclidean**</span> on learned embeddings (e.g., concatenated numeric + entity embeddings).
+
+---
+
+<span class="hljs-section">## 3. Clustering Algorithms</span>
+
+<span class="hljs-bullet">1.</span> <span class="hljs-strong">**Partitioning Methods**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**K-Prototypes**</span>: extends K-Means to mixed data (minimizes numeric variance + categorical mismatches).
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Mini-Batch Clustering**</span> for scalability on large corpora.
+
+<span class="hljs-bullet">2.</span> <span class="hljs-strong">**Density-Based**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**HDBSCAN**</span>: clusters in arbitrary shapes, supports custom distance metrics (e.g., Gower).
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**DBSCAN**</span>: good for isolation of outliers (“niche” companies).
+
+<span class="hljs-bullet">3.</span> <span class="hljs-strong">**Hierarchical**</span>
+
+<span class="hljs-bullet">   *</span> Agglomerative clustering with linkage on mixed-type distances → yields dendrogram for exploratory analysis.
+
+<span class="hljs-bullet">4.</span> <span class="hljs-strong">**Model-Based**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Gaussian / Categorical Mixture Models**</span> (latent class analysis) for probabilistic cluster membership.
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Bayesian Nonparametrics**</span> (Dirichlet Process Mixtures) when the number of clusters is unknown.
+
+<span class="hljs-bullet">5.</span> <span class="hljs-strong">**Deep &amp; Representation Learning**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Deep Embedded Clustering (DEC)**</span>: jointly learns feature representation and cluster assignment.
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Graph Neural Networks**</span> for relational data when companies form networks (e.g., supply-chain graphs).
+
+---
+
+<span class="hljs-section">## 4. Behavioral / Time-Series Clustering</span>
+
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Dynamic Time Warping (DTW)**</span> + K-Means/DBSCAN to cluster companies by similar temporal patterns (sales, web-traffic histories).
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Shape-Based / Feature-Based**</span> methods: extract summary statistics (trends, seasonality) before clustering.
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Sequence Clustering**</span>: treat events (e.g., product launches) as categorical sequences; use Levenshtein or sequence-embedding approaches.
+
+---
+
+<span class="hljs-section">## 5. Validation &amp; Interpretation</span>
+
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Internal Metrics**</span>: silhouette score (adapted for mixed distances), Dunn index.
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Stability Analysis**</span>: bootstrap sampling to check cluster consistency.
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Business-Driven Validation**</span>: domain expert review; compare clusters against known segments (e.g., industry codes, revenue tiers).
+<span class="hljs-bullet">*</span> <span class="hljs-strong">**Visualization**</span>: t-SNE or UMAP on embedding space to inspect cluster separation.
+
+---
+
+<span class="hljs-section">## 6. Active Research &amp; Industry Domains</span>
+
+<span class="hljs-bullet">1.</span> <span class="hljs-strong">**Research Fields**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Mixed-Data Clustering**</span>: development of new similarity measures and scalable algorithms (e.g., recent papers on k-prototype enhancements).
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Deep Clustering**</span>: combines representation learning with clustering (e.g., “Deep Clustering via Contrastive Learning”).
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Time-Series &amp; Trajectory Analysis**</span>: DTW improvements, shapelets discovery.
+
+<span class="hljs-bullet">2.</span> <span class="hljs-strong">**Industry Applications**</span>
+
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Customer &amp; Market Segmentation**</span> (retail, e-commerce)
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Credit-Risk &amp; Fraud Detection**</span> (finance, fintech)
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Supply-Chain &amp; Vendor Risk**</span> (manufacturing, logistics)
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**Programmatic Advertising &amp; Ad Tech**</span> (bidder behavior clustering)
+<span class="hljs-bullet">   *</span> <span class="hljs-strong">**SaaS &amp; B2B Sales**</span> (account-based marketing clusters)
+
+---
+
+By carefully combining robust preprocessing, mixed-type similarity measures, and a suitable clustering framework—augmented with modern representation-learning techniques—you can create clusters that reflect both shared attributes and behavioral patterns. Researchers in unsupervised learning and practitioners in retail, finance, and ad tech are actively refining these approaches to drive actionable insights.
+</code></pre>
+
+            
+            
+        </body>
+        </html>
