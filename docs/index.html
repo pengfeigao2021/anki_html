@@ -1,46 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            background-color: #f0f0f0;
-            font-family: Arial, sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mobile Card Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px;
+    }
 
-        h1 {
-            text-align: center;
-            color: #333;
-        }
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      margin: 10px 0;
+      padding: 16px;
+      text-decoration: none; /* remove underline */
+      color: inherit; /* inherit text color */
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+      display: block; /* make the link behave like a block/card */
+    }
 
-        p {
-            text-align: center;
-            color: #666;
-        }
+    .card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
 
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-        }
-    </style>
+    .card-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .card-description {
+      font-size: 0.95em;
+      color: #007bff; /* blue accent for numbers or key info */
+    }
+
+    /* Responsive font sizing for small screens */
+    @media (max-width: 480px) {
+      .card {
+        padding: 12px;
+      }
+      .card-title {
+        font-size: 1.1em;
+      }
+      .card-description {
+        font-size: 0.9em;
+      }
+    }
+  </style>
 </head>
-
 <body>
-    <h1>Welcom to anki HTML!</h1>
-    <p>This is a simple table to learn anki cards.</p>
 
-    <div>
-        <h2>List of cards</h2>
-        <ol>
-            <li>
-                <a href="gre_cards.html">GRE Words</a>
-            </li>
-            <li>
-                <a href="mypapernotes_cards.html">My Paper Notes</a>
-            </li>
-            <li>
-                <a href="daily_schedule.html">Daily Schedule</a>
-            </li>
-            <li>
-                <a href="toubiao.html">Toubiao</a>
-            </li>
-        </ol>
-    </div>
+  <a href="gre_cards.html" class="card">
+    <div class="card-title">Anki: GRE words</div>
+    <div class="card-description">200 words</div>
+  </a>
+
+  <a href="mypapernotes_cards.html" class="card">
+    <div class="card-title">Anki: Paper notes</div>
+    <div class="card-description" style="color:#28a745;">50 paper notes</div>
+  </a>
+
+  <a href="daily_schedule.html" class="card">
+    <div class="card-title">Daily routine</div>
+    <div class="card-description" style="color:#dc3545;"></div>
+  </a>
+
+  <a href="" class="card">
+    <div class="card-title">Math quiz</div>
+    <div class="card-description" style="color:#17a2b8;"></div>
+  </a>
+
 </body>
+</html>
+
