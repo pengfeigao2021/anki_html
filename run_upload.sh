@@ -1,3 +1,4 @@
+#!/bin/bash
 # reset to tag and push changes
 set -e
 set -x
