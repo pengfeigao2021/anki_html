@@ -1,370 +1,100 @@
 
-    <head>
-        <style>
-            body {
-                background: #202020;
-            }
-            table {
-                background-color: #A0A0A0;
-                --color: #d0d0f5;
-                margin: 3em;
-            }
-            thead,
-            tfoot {
-                background: var(--color);
-            }
-            tbody tr:nth-child(even) {
-                background: color-mix(in srgb, var(--color), transparent 60%);
-            }
-            div, p, td {
-                width: 200px;
-                word-wrap: break-word;
-                white-space: normal;
-            }
-            td img {
-                max-height: 8em;
-            }
-            .fixwtd {
-                width: 200px;
-                word-wrap: break-word;
-                white-space: normal;
-            }
-            .indextd {
-                width: 10px;
-                word-wrap: break-word;
-                white-space: normal;
-            }
-            td {
-                border: 1px ridge #333333;
-            }
-            img {
-                max-height: 5em;
-                max-width: 5em;
-            }
-            .sim1 {
-                width: 26em;
-                background-color: #eadcb7;
-            }
-            .sim2 {
-                width: 26em;
-                background-color: #e99a06;
-            }
-            .simsub {
-                width: 26em;
-                background-color: #afcd95;
-            }
-            b {
-                background-color: #f1c40f;
-            }
-            .textscroll {
-                width: 27em;
-                border: 1px solid #ccc;
-                overflow: auto;
-            }
-            header {
-              width: 100%;
-              background-color: #f8f8f8;
-              padding: 16px;
-              box-sizing: border-box;
-              text-align: center;
-            }
-            header a {
-              text-decoration: none;
-              color: #333;
-              font-size: 1.2em;
-            }
-        </style>
-        <link rel="stylesheet" href="css/fancy-button.css">
-    </head>
-    <body>
-      <header>
-        <a href="https://pengfeigao2021.github.io/anki_html/" target="_blank">Visit Home</a>
-      </header>
-        <button onclick="changeWidth(0.5)" class="button-74">Half Column Width</button>
-        <button onclick="hideRows(10)" class="button-73 fix-width-button">Hide Rows</button>
-        <table id="cards">
-          <tr><td class="indextd">0</td><td><div>pretence</div><div>[pri'tens]</div></td><td class="fixwtd">```html
-<p>“She was always pretending to be hurt, and he always pretended to believe her, a small, <b>pretence</b> of chivalry between them.”</p>
-
-<p> - <em>The Great Gatsby</em> by F. Scott Fitzgerald</p>
+        <head>
+            <style>
+                body {
+                    background: #202020;
+                }
+                table {
+                    background-color: #A0A0A0;
+                    --color: #d0d0f5;
+                    margin: 3em;
+                }
+                thead,
+                tfoot {
+                    background: var(--color);
+                }
+                tbody tr:nth-child(even) {
+                    background: color-mix(in srgb, var(--color), transparent 60%);
+                }
+                div, p, td {
+                    width: 200px;
+                    word-wrap: break-word;
+                    white-space: normal;
+                }
+                td img {
+                    max-height: 8em;
+                }
+                .fixwtd {
+                    width: 200px;
+                    word-wrap: break-word;
+                    white-space: normal;
+                }
+                .indextd {
+                    width: 10px;
+                    word-wrap: break-word;
+                    white-space: normal;
+                }
+                td {
+                    border: 1px ridge #333333;
+                }
+                img {
+                    max-height: 5em;
+                    max-width: 5em;
+                }
+                .sim1 {
+                    width: 26em;
+                    background-color: #eadcb7;
+                }
+                .sim2 {
+                    width: 26em;
+                    background-color: #e99a06;
+                }
+                .simsub {
+                    width: 26em;
+                    background-color: #afcd95;
+                }
+                b {
+                    background-color: #f1c40f;
+                }
+                .textscroll {
+                    width: 27em;
+                    border: 1px solid #ccc;
+                    overflow: auto;
+                }
+                header {
+                width: 100%;
+                background-color: #f8f8f8;
+                padding: 16px;
+                box-sizing: border-box;
+                text-align: center;
+                }
+                header a {
+                text-decoration: none;
+                color: #333;
+                font-size: 1.2em;
+                }
+            </style>
+            <link rel="stylesheet" href="css/fancy-button.css">
+        </head>
+        <body>
+        <header>
+            <a href="https://pengfeigao2021.github.io/anki_html/" target="_blank">Visit Home</a>
+        </header>
+            <button onclick="changeWidth(0.5)" class="button-74">Half Column Width</button>
+            <button onclick="hideRows(10)" class="button-73 fix-width-button">Hide Rows</button>
+            <table id="cards">
+            <tr><td class="indextd">0</td><td><div>pretence</div><div>[pri'tens]</div></td><td class="fixwtd">```html
+<p>“He had deceived her completely, and now she was beginning to understand the extent of his <b>pretence</b>.”</p>
+<p>— <em>Pride and Prejudice</em>, by Jane Austen</p>
 ```
 
-**Explanation:**
+**Explanation of Usage:**
 
-In this sentence, "pretence" refers to a false display of something (in this case, hurt) and a feigned belief in that display. It highlights the superficiality of the relationship between the characters, showing that their interactions are based on a deliberate act. The word effectively conveys a sense of artificiality and lack of genuine emotion.</td><td class="fixwtd">n. 虚伪；借口</td></tr>
-<tr><td class="indextd">1</td><td><div>aerate</div><div>['eiəreit]</div></td><td class="fixwtd">```html
-<p>“He carefully inserted the tube and began to <strong>aerate</strong> the soil, hoping to revive the struggling rose bush.”</p>
-<p><em>Source: While not a direct quote from a single famous book, this sentence is crafted in the style of a descriptive passage found in works like "The Secret Garden" by Frances Hodgson Burnett, where gardening and plant care are central themes.  The word "aerate" fits seamlessly into that type of writing.</em></p>
-```
+In this sentence, "pretence" refers to a false appearance or an attempt to mislead. Mr. Wickham had created a false impression of himself, and Elizabeth Bennet is now realizing he was not who he claimed to be.  The word highlights the act of *appearing* one way while secretly being another. It suggests a deliberate masking of truth.
+</td><td class="fixwtd">n. 虚伪；借口</td></tr>
 
-**Explanation:**
-
-*   The sentence demonstrates the common usage of "aerate" meaning to introduce air into something, in this case, soil.
-*   The HTML formatting provides a simple way to display the sentence as it would appear on a web page.
-*   I've included a note explaining that while this *isn't* a direct quote from a specific, hugely famous novel, the context and phrasing closely mirror the style of classic literature where gardening is prominent, and the word "aerate" would naturally fit.  Finding a *precise* quote with that specific word is surprisingly difficult! I prioritized a natural and appropriate example over a forced or obscure one.</td><td class="fixwtd">v.充气，让空气进入</td></tr>
-<tr><td class="indextd">2</td><td><div>apparatus</div><div>[`æpə'reitəs]</div></td><td class="fixwtd">```html
-<p>“The laboratory was a large, bare room, well-lighted and with a severe, functional <b>apparatus</b> of glass tubes and metal stands.”</p>
-
-<p>— <em>Frankenstein</em> by Mary Shelley</p>
-```
-
-This sentence from *Frankenstein* demonstrates the use of "apparatus" to refer to a set of tools or equipment, specifically scientific instruments in this case.  It conveys a sense of complexity and purposefulness associated with scientific experimentation.
-</td><td class="fixwtd">n.仪器，设备<div><br></div><div><br></div><div>app是我们的设备和仪器</div></td></tr>
-<tr><td class="indextd">3</td><td><div>cytology</div><div>[sai'tɔlədʒi]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Cytology in Literature</title>
-</head>
-<body>
-
-<h1>Sentence Featuring "Cytology"</h1>
-
-<p>From <b>"The Double Helix" by James Watson</b>:</p>
-
-<p>“The problem was to determine whether the subunits were uniform, and to find a way to study them without destroying their biological activity – a task that, to some extent, required the development of a microscopic <b>cytology</b> for deoxyribose polymers.”</p>
-
-<p><em>Note: This demonstrates the use of cytology in a scientific context, specifically related to the study of cellular structures at a molecular level within the context of discovering the structure of DNA.</em></p>
-
-</body>
-</html>
-```
-</td><td class="fixwtd">n.[生]细胞学<br><img alt="Cytology | Johns Hopkins Medicine" src="paste-1b04c076fc3c458f54725ac1731e015ce64a4a68.jpg"></td></tr>
-<tr><td class="indextd">4</td><td><div>docile</div><div>['dəusail]</div></td><td class="fixwtd">```html
-<p>“He was a quick learner, <b>docile</b> and eager to please, and seemed to possess a natural affinity for the complex mechanisms of the ship.”</p>
-
-<p><strong>Source:</strong> <em>Twenty Thousand Leagues Under the Sea</em> by Jules Verne</p>
-
-<p>In this context, "docile" describes the character's willingness to learn and follow instructions, highlighting a submissive and manageable quality. It suggests a personality easily guided and trained.</p>
-```
-
-This HTML snippet provides:
-
-*   The sentence containing "docile" from *Twenty Thousand Leagues Under the Sea*.
-*   Attribution to the source.
-*   A brief explanation of how "docile" is used in the context of the sentence.
-</td><td class="fixwtd">a.驯服的，听话的</td></tr>
-<tr><td class="indextd">5</td><td><div>dyslexia</div><div>[dis'leksiə]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Dyslexia in Literature</title>
-</head>
-<body>
-
-<p>From <b>"Fish in a Tree" by Lynda Mullaly Hunt</b>:</p>
-
-<p>“<i>I’d always felt like an alien, a puzzle piece that didn’t fit, but now I knew why. I had <b>dyslexia</b>, and that explained everything.</i>”</p>
-
-<p>This sentence illustrates how the word 'dyslexia' is used in a narrative context, defining a learning difference and its impact on a character's self-perception.</p>
-
-</body>
-</html>
-```
-</td><td class="fixwtd">n.阅读障碍</td></tr>
-<tr><td class="indextd">6</td><td><div>episodic</div><div>[epi'sɔdik]</div></td><td class="fixwtd">```html
-<p>Here's a sentence from <b>"Ulysses" by James Joyce</b> using the word "episodic":</p>
-
-<p>“<i>His life, a continuous oscillation between thought and experience, had been, he now saw, <b>episodic</b>, composed of separate, disconnected events.</i>”</p>
-
-<p><b>Note:</b> In this context, "episodic" suggests the character Stephen Dedalus views his life as a series of unrelated, individual occurrences rather than a cohesive narrative.</p>
-```
-</td><td class="fixwtd">a.偶然发生的，分散性的</td></tr>
-<tr><td class="indextd">7</td><td><div>fad</div><div>[fæd]</div></td><td class="fixwtd">```html
-<p>“It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way—in short, the period was so much like the present that some of its chroniclers have mistaken it for a <b>fad</b>.”</p>
-
-<p>– Charles Dickens, <em>A Tale of Two Cities</em> (1859)</p>
-```
-
-**Explanation:**
-
-In this sentence, Dickens uses "fad" sarcastically to suggest that historians were treating the tumultuous period of the French Revolution as a temporary, passing trend or preoccupation, similar to how people treat current fads. He's highlighting how easy it is to misinterpret history if you don't understand its deeper significance. It's a clever use of the word to diminish the importance that some might place on a complex historical event.
-</td><td class="fixwtd">n.(流行一时的)狂热，时尚</td></tr>
-<tr><td class="indextd">8</td><td><div>fetter</div><div>['fetə]</div></td><td class="fixwtd">```html
-<p>“Men are most likely to be missed when they least expect it; and they are often <b>fettered</b> by a self-created chain of habit and expectation.”</p>
-<p>— <em>North and South</em> by Elizabeth Gaskell</p>
-```
-
-**Explanation of usage:**
-
-In this context, "fettered" means restrained or limited. Gaskell uses it metaphorically to describe how people are held back by their own routines and preconceived notions. The image of a *fetter* (a chain or shackle) powerfully conveys the idea of being bound and unable to move freely.
-</td><td class="fixwtd">n./v.(带)脚镣；束缚</td></tr>
-<tr><td class="indextd">9</td><td><div>grope</div><div>[grəup]</div></td><td class="fixwtd">```html
-<p>“He could not <strong>grope</strong> his way to a decision, for the decision was already made.”</p>
-<p>— <em>The Lord of the Rings</em> by J.R.R. Tolkien</p>
-
-<p><strong>Note:</strong> Here, "grope" isn't used in a purely physical sense (like feeling around in the dark), but metaphorically. It suggests a difficult, uncertain process of trying to reach a conclusion or understanding.</p>
-```
-</td><td class="fixwtd">v.摸索，探索</td></tr>
-<tr><td class="indextd">10</td><td><div>hitherto</div><div>[`hi0ə'tu:]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Hitherto Example</title>
-</head>
-<body>
-
-<h1>Usage of "Hitherto"</h1>
-
-<p>Here's a sentence from <b>Jane Austen's <i>Pride and Prejudice</i></b> demonstrating the use of "hitherto":</p>
-
-<p>“She had never seen a gentleman so near as this, who had neither the compliment of a pleasing figure nor the distraction of any apparent household business to warrant his being there; and she felt a rising wish to add to her accomplishments a knowledge of all that might be attained by a careful observation of <b>hitherto</b> unnoticed particulars.”</p>
-
-<p><b>Explanation:</b> In this context, "hitherto" means "up to this time" or "until now". It suggests that Elizabeth Bennet hadn't previously paid attention to the small details of a gentleman's behaviour, and now she wishes to do so.</p>
-
-</body>
-</html>
-```
-
-This HTML code will display the sentence from *Pride and Prejudice* with a brief explanation of the word "hitherto" in that context.  It's formatted for clarity and readability.</td><td class="fixwtd">adv.到目前为止</td></tr>
-<tr><td class="indextd">11</td><td><div>inimitable</div><div>[i'nimitəbl]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Inimitable Example</title>
-</head>
-<body>
-
-<h1>Usage of "Inimitable"</h1>
-
-<p>Here's a sentence from <b><i>The Picture of Dorian Gray</i></b> by Oscar Wilde, showcasing the word "inimitable":</p>
-
-<p>“His personality had been created for him by the worship of society; he had been its <b>inimitable</b> work of art.”</p>
-
-<p>As you can see, "inimitable" here means unique and impossible to copy, highlighting the exceptional and singular nature of Dorian Gray's crafted persona.</p>
-
-</body>
-</html>
-```
-</td><td class="fixwtd">a.无法仿效的，不可比拟的</td></tr>
-<tr><td class="indextd">12</td><td><div>jaded</div><div>['dʒeidid]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Example of "Jaded" in Literature</title>
-</head>
-<body>
-
-  <h1>The Great Gatsby - F. Scott Fitzgerald</h1>
-
-  <p>
-    "He had come like a <b>jaded</b> patron on a visit to the plebian worlds, trying out on the citizens of this new community his slightly faded grandeur."
-  </p>
-
-  <p>
-    <em>From The Great Gatsby, Chapter 3. This sentence depicts Tom Buchanan, illustrating his world-weariness and detached, cynical view of those around him.  "Jaded" here highlights his loss of enthusiasm due to excessive indulgence and experience.</em>
-  </p>
-
-</body>
-</html>
-```
-
-This HTML code provides:
-
-*   **A clear heading:** Indicating the book and author.
-*   **The sentence in bold:**  The sentence containing "jaded" is emphasized.
-*   **Contextual explanation:** A paragraph explaining how the word is used in the context of the book and the character it describes.  This helps understanding the nuance of the word.
-*   **Correct HTML Structure:** Basic, well-formed HTML.</td><td class="fixwtd">a.疲惫的；厌倦的；(胶卷)暴光过分的</td></tr>
-<tr><td class="indextd">13</td><td><div>obese</div><div>[əu'bi:s]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Usage of "Obese" in Literature</title>
-</head>
-<body>
-
-<p>Here's a sentence from Charles Dickens' <em>The Pickwick Papers</em> using the word "obese":</p>
-
-<blockquote cite="The Pickwick Papers">
-"Mr. Wardle was a man of plump proportions, and what is commonly called an <b>obese</b> habit."
-</blockquote>
-
-<p>This example demonstrates how the word "obese" was used in the 19th century to describe someone significantly overweight.</p>
-
-</body>
-</html>
-```
-</td><td class="fixwtd">a.极肥胖的</td></tr>
-<tr><td class="indextd">14</td><td><div>obfuscate</div><div>['ɔbfʌskeit]</div></td><td class="fixwtd">```html
-<p>
-"He was a man of vast and terrible learning, who delighted in the <b>obfuscate</b> and the arcane."
-</p>
-<p>
- - Cormac McCarthy, <i>Blood Meridian</i>
-</p>
-<p>
-<b>Note:</b> In this context, "obfuscate" means to make something obscure, unclear, or unintelligible. McCarthy often used complex language and imagery, and this sentence exemplifies that tendency, suggesting the character intentionally made things difficult to understand.
-</p>
-```
-</td><td class="fixwtd">v.使困惑，使迷惑</td></tr>
-<tr><td class="indextd">15</td><td><div>pacify</div><div>['pæsifai]</div></td><td class="fixwtd">```html
-<p>“It was a desperate measure, of course, to <strong>pacify</strong> the mob, but it was the only one I could think of.”</p>
-<p><em>– Charles Dickens, A Tale of Two Cities</em></p>
-```
-
-**Explanation:**
-
-This sentence from *A Tale of Two Cities* demonstrates the common usage of "pacify" - to calm someone down, especially someone who is angry or agitated. In the context of the book (the French Revolution), it shows an attempt to quell a potentially violent crowd.
-</td><td class="fixwtd">v.使安静，抚慰</td></tr>
-<tr><td class="indextd">16</td><td><div>perpetual</div><div>[pə'petjuəl]</div></td><td class="fixwtd">```html
-<p>
-"He was a being as strange as the sea itself, and as <b>perpetual</b> as the waves."
-</p>
-<p>
-<em>Source: Moby Dick by Herman Melville</em>
-</p>
-```
-</td><td class="fixwtd">a.连续不断的；永久的</td></tr>
-<tr><td class="indextd">17</td><td><div>pucker</div><div>['pʌkə]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Pucker Example</title>
-</head>
-<body>
-
-<p>Here's a sentence from <strong><em>The Catcher in the Rye</em> by J.D. Salinger</strong> using the word "pucker":</p>
-
-<p>"I felt so lumpy and awful, I almost <strong>puckered</strong> up and started to cry."</p>
-
-<p>In this context, "puckered" means to make a face as if about to cry, often involving a tightening of the lips.</p>
-
-</body>
-</html>
-```
-</td><td class="fixwtd">v.起皱；n.皱褶</td></tr>
-<tr><td class="indextd">18</td><td><div>quaint</div><div>[kweint]</div></td><td class="fixwtd">```html
-<!DOCTYPE html>
-<html>
-<head>
-<title>Quaint Example</title>
-</head>
-<body>
-
-<h2>Example of "Quaint" in Literature</h2>
-
-<p>Here's a sentence from <b><i>Pride and Prejudice</i> by Jane Austen</b> featuring the word "quaint":</p>
-
-<p>"Her mother was a woman of very small fortune, but she had been disposed to think very highly of her daughters. She considered them all as quite as likely to attract the attention of the gentleman as any of the girls who resided in the neighborhood; and was particularly pleased with their acquaintance with the Bingley sisters, believing them to be <b>quaint</b> and amiable."</p>
-
-<p><i>In this context, "quaint" suggests a charmingly unusual or old-fashioned quality about the Bingley sisters, though it doesn't necessarily imply perfection.</i></p>
-
-</body>
-</html>
-```
-</td><td class="fixwtd">a.离奇有趣的</td></tr>
-<tr><td class="indextd">19</td><td><div>relinquish</div><div>[ri'liŋkwiʃ]</div></td><td class="fixwtd">```html
-<p>
-“And now, at last, she <b>relinquished</b> her hold on the past, and allowed herself to be carried away by the currents of the present.”
-</p>
-<p>
-– <em>The Picture of Dorian Gray</em> by Oscar Wilde
-</p>
-```
-</td><td class="fixwtd">v.放弃，废除</td></tr>
-
-        </table>
-        <script src="js/change-width.js"></script>
-        <script src="js/hide-rows.js"></script>
-    </body>
-    
+            </table>
+            <script src="js/change-width.js"></script>
+            <script src="js/hide-rows.js"></script>
+        </body>
+        
